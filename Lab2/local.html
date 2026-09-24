@@ -2,10 +2,46 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <title>Barreiro</title>
+    <title>Barreiro - Multimédia</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      .mapa-iframe {
+      .fotografias {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .fotografias img {
+        max-width: 150px;
+        border-radius: 20px;
+      }
+      .poema {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 20px;
+        background: #f4f4f4;
+        border-radius: 12px;
+        font-family: Georgia, serif;
+        line-height: 1.6;
+        text-align: center;
+      }
+      .poema p:nth-child(1) {
+        font-weight: bold;
+        font-size: 1.3em;
+        color: #2c3e50;
+      }
+      .poema p:nth-child(even) {
+        color: #555;
+      }
+      .poema p:nth-child(4n) {
+        color: #2980b9;
+      }
+      .poema p:last-child {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #8e44ad;
+      }
+      .video-iframe {
         border: 0;
       }
     </style>
@@ -13,7 +49,7 @@
   <body>
     <header>
       <h1>Barreiro</h1>
-      <nav>
+      <nav aria-label="Menu Principal">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="local.html">Localização</a></li>
@@ -23,23 +59,91 @@
       </nav>
     </header>
     <main>
-      <h2>Localização</h2>
-      <p>
-        O Barreiro é um município localizado na margem sul do Rio Tejo, na Área
-        Metropolitana de Lisboa, Portugal. Limita a norte com o Estuário do
-        Tejo, a leste com o município da Moita, a sul com os municípios de
-        Setúbal e Sesimbra, a sudoeste com o município de Palmela e a oeste com
-        o município do Seixal.
-      </p>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!3m2!1spt-PT!2spt!4v1758787743956!5m2!1spt-PT!2spt!6m8!1m7!1s_dc-XYeLsBwRyIuXhjhIOQ!2m2!1d38.64810751768451!2d-9.06493660727866!3f281.61517452806225!4f8.295910823512386!5f0.7820865974627469"
-        width="400"
-        height="300"
-        style="border: 0"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <h2>Multimédia</h2>
+      <p>Nesta página encontra conteúdos multimédia.</p>
+      <nav aria-label="Menu Interno de Multimédia">
+        <a href="#fotografias">Fotografias</a>
+        <a href="#video">Vídeo</a>
+        <a href="#poema">Poema</a>
+      </nav>
+      <section>
+        <h3 id="fotografias">Fotografias</h3>
+        <div class="fotografias">
+          <img src="imagens/Barcosbarreiro.jpg" alt="Barcos" />
+          <img
+            src="imagens/catarinaeufemiabarreiro.jpeg"
+            alt="Parque Catarina Eufémia"
+          />
+          <img
+            src="imagens/estacaoantigabarreiro.jpg"
+            alt="Antiga estação Ferroviária"
+          />
+          <img
+            src="imagens/Igrejabarreiro.jpg"
+            alt="Igreja Nossa Senhora do Rosário"
+          />
+          <img src="imagens/moinhobarreiro.jpg" alt="Alto dos Moinho" />
+          <img src="imagens/Pdcbarreiro.jpg" alt="Parque da Cidade" />
+          <img
+            src="imagens/polibarreiro.jpg"
+            alt="Parque Recreativo da Cidade"
+          />
+          <img
+            src="imagens/praiabarreito.jpg"
+            alt="Praia Fluvial da Alburrica"
+          />
+        </div>
+      </section>
+
+      <section>
+        <h3 id="video">Vídeo</h3>
+        <iframe
+          class="video-iframe"
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/KaqFhRtMAgQ?si=HFgrBF2fJj2NuqQI"
+          title="YouTube video player - Barreiro"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+
+        <h3 id="poema">Poema</h3>
+        <div class="poema">
+          <p>À beira do Tejo nasceste,</p>
+          <p>terra de cais e de partida,</p>
+          <p>onde o ferro se fez memória</p>
+          <p>e a fábrica se tornou vida.</p>
+          <p>Nos teus trilhos de comboio</p>
+          <p>ainda ecoa o labor antigo,</p>
+          <p>o apito das sirenes,</p>
+          <p>o suor que era destino.</p>
+          <p>Cidade de mãos calejadas,</p>
+          <p>erguida no sal da maré,</p>
+          <p>és mosaico de gente inteira,</p>
+          <p>és saudade e és fé.</p>
+          <p>Das fragatas às oficinas,</p>
+          <p>dos bairros ao coração,</p>
+          <p>o Barreiro é um poema vivo,</p>
+          <p>feito de luta e paixão.</p>
+          <p>E quando o sol se deita</p>
+          <p>sobre a pele do rio manso,</p>
+          <p>é no reflexo dourado</p>
+          <p>que descubro o teu remanso.</p>
+          <p>Barreiro, cais da esperança,</p>
+          <p>terra de voz operária,</p>
+          <p>tu és raiz e és futuro,</p>
+          <p>tu és poesia diária.</p>
+        </div>
+      </section>
     </main>
     <footer>
       <p>Universidade Lusófona 2026</p>
