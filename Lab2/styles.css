@@ -1,3 +1,38 @@
-img {
-  width: 300px;
+header{
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+}
+
+nav{
+    background-color: #b3b3b3;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    display: inline;
+    margin: 0 15px;
+}
+
+a{
+   color: steelblue;
+}
+
+main{
+    margin: 20px;
+}
+
+
+footer{
+    text-align: center;
+    background-color: #b3b3b3;
+    color: white;
 }

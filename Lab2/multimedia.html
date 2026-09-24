@@ -3,22 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <title>Cidade</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Barreiro</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="local.html">Localização</a></li>
-          <li><a href="multimedia.html">Multimédia</a></li>
-          <li><a href="info.html">Informações</a></li>
-        </ul>
-      </nav>
-    </header>
+        <style>
+            .fotografias{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .fotografias img {
+                max-width: 150px;
+                border-radius: 20px;
+            }
+            .poema {
+                max-width: 600px;
+                margin: 40px auto;
+                padding: 20px;
+                background: #f4f4f4;
+                border-radius: 12px;
+                font-family: Georgia, serif;
+                line-height: 1.6;
+                text-align: center;
+            }
+
+
+            .poema p:nth-child(1) {
+                font-weight: bold;
+                font-size: 1.3em;
+                color: #2c3e50;
+            }
+
+            .poema p:nth-child(even) {
+                color: #555;
+            }
+
+            .poema p:nth-child(4n) {
+                color: #2980b9;
+            }
+
+            .poema p:last-child {
+                margin-top: 15px;
+                font-weight: bold;
+                color: #8e44ad;
+            }
+        </style>
+
+
+        <header>
+            <h1>Barreiro</h1>
+            <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="local.html">Localização</a></li>
+                <li><a href="multimedia.html">Multimédia</a></li>
+                <li><a href="info.html">Informações</a></li>
+            </ul>
+        </nav>
+
     <main>
-      <h2>Home</h2>
-      <p>A minha cidade é muito linda!!!</p>
+      <h2>Multimédia</h2>
+      <p>Nesta página encontra conteúdos multimédia.</p>
+      <nav>
+        <a href="#fotografias">Fotografias</a>
+        <a href="#video">Vídeo</a>
+        <a href="#poema">Poema</a>
+    </nav>
+      <section>
+                <h3 id="fotografias">Fotografias</h3>
+                <div class = "fotografias">
+                <img src="imagens/Barcosbarreiro.jpg" alt="Barcos">
+                <img src="imagens/catarinaeufemiabarreiro.jpeg" alt= "Parque Catarina Eufémia">
+                <img src="imagens/estacaoantigabarreiro.jpg" alt="Antiga estação Ferroviária">
+                <img src= "imagens/Igrejabarreiro.jpg" alt="Igreja Nossa Senhora do Rosário">
+                <img src="imagens/moinhobarreiro.jpg" alt="Alto dos Moinho">
+                <img src="imagens/Pdcbarreiro.jpg" alt="Parque da Cidade">
+                <img src="imagens/polibarreiro.jpg" alt="Parque Recreativo da Cidade">
+                <img src="imagens/praiabarreito.jpg" alt="Praia Fluvial da Alburrica">
+                </div>
+               </section>
+
+                <section>
+                <h3 id="Video">Video</h3>
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/KaqFhRtMAgQ?si=HFgrBF2fJj2NuqQI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                 <h3 id="poema">Poema</h3>
+                <div class="poema">
+                    <p>À beira do Tejo nasceste,</p>
+                    <p>terra de cais e de partida,</p>
+                    <p>onde o ferro se fez memória</p>
+                    <p>e a fábrica se tornou vida.</p>
+                    <p>Nos teus trilhos de comboio</p>
+                    <p>ainda ecoa o labor antigo,</p>
+                    <p>o apito das sirenes,</p>
+                    <p>o suor que era destino.</p>
+                    <p>Cidade de mãos calejadas,</p>
+                    <p>erguida no sal da maré,</p>
+                    <p>és mosaico de gente inteira,</p>
+                    <p>és saudade e és fé.</p>
+                    <p>Das fragatas às oficinas,</p>
+                    <p>dos bairros ao coração,</p>
+                    <p>o Barreiro é um poema vivo,</p>
+                    <p>feito de luta e paixão.</p>
+                    <p>E quando o sol se deita</p>
+                    <p>sobre a pele do rio manso,</p>
+                    <p>é no reflexo dourado</p>
+                    <p>que descubro o teu remanso.</p>
+                    <p>Barreiro, cais da esperança,</p>
+                    <p>terra de voz operária,</p>
+                    <p>tu és raiz e és futuro,</p>
+                    <p>tu és poesia diária.</p>
+                    </div>
+            </section>
+
     </main>
     <footer>
       <p>Universidade Lusófona 2026</p>
