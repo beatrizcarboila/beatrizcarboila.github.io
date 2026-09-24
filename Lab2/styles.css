@@ -1,38 +1,37 @@
-header{
-    background-color: steelblue;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin: 0;
+header {
+  background-color: steelblue;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
 }
 
-nav{
-    background-color: #b3b3b3;
-    text-align: center;
-    margin: 0;
-    padding: 10px;
+nav {
+  background-color: #b3b3b3;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
 }
 
-ul{
-    padding: 0;
+ul {
+  padding: 0;
 }
 
-li{
-    display: inline;
-    margin: 0 15px;
+li {
+  display: inline;
+  margin: 0 15px;
 }
 
-a{
-   color: steelblue;
+a {
+  color: steelblue;
 }
 
-main{
-    margin: 20px;
+main {
+  margin: 20px;
 }
 
-
-footer{
-    text-align: center;
-    background-color: #b3b3b3;
-    color: white;
+footer {
+  text-align: center;
+  background-color: #b3b3b3;
+  color: white;
 }
