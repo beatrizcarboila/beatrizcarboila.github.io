@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-areas:
+  'header header'
+  'main sidebar'
+  'footer footer';
+  background-color: aquamarine;
+}
+
+header{
+    grid-area: header;
+    background-color:teal;
+    color: white;
+    padding: 20px;
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px;
+}
+
+header * { background: red;}
+
+aside.Sabiasque{
+grid-area: sidebar;
+background-color:greenyellow;
+color:white ;
+padding: 20px;
+border-top: 2px;
+}
+
+
+main section{
+background-color: rgba(255, 0, 0, 0.345);
+color: white;
+padding: 15px;
+margin: 10px;
+border-radius: 10px;
+}
+
+footer{
+    grid-area: footer;
+    background-color: rgb(128, 0, 92);
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.canções ul{
+    margin-left: 20px;
+}
+
+
+
