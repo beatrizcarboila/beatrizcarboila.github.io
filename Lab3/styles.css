@@ -1,0 +1,57 @@
+/* Estilo base do menu de navegação (Desktop) */
+.menu-cidades {
+  background-color: #f0f4f8;
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-cidades ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-cidades a {
+  text-decoration: none;
+  color: steelblue;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.menu-cidades a:hover {
+  background-color: steelblue;
+  color: white;
+}
+
+/* Responsividade para Telemóvel / Ecrãs Pequenos (@media query) */
+@media (max-width: 768px) {
+  .menu-cidades {
+    padding: 10px;
+  }
+
+  .menu-cidades ul {
+    flex-direction: column; /* Transforma o menu horizontal em vertical no telemóvel */
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu-cidades li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-cidades a {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    background-color: #e2e8f0;
+  }
+}

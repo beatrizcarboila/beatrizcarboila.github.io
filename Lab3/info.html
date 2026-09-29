@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Barreiro - Informações</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Layout principal em 2D com display: grid */
+      .info-grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(150px, auto);
+        gap: 20px;
+        max-width: 1100px;
+        margin: 30px auto;
+        padding: 0 20px;
+      }
+
+      /* Posicionamento específico de cada elemento na grelha */
+      .intro-box {
+        grid-column: 1 / 3;
+        grid-row: 1;
+        background-color: #f4f6f9;
+        padding: 20px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      /* Espaço em branco deliberado na grelha  */
+      .espaco-vazio {
+        grid-column: 3;
+        grid-row: 1 / 3;
+        /* Espaço em branco puro para criar peso visual e respiro no design */
+      }
+
+      .tabela-box {
+        grid-column: 1 / 3;
+        grid-row: 2;
+        background-color: #ffffff;
+        padding: 15px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        background-color: white;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+
+      th {
+        color: darkblue;
+        background-color: #f8fafc;
+      }
+
+      td {
+        color: darkslategray;
+      }
+
+      .link-site {
+        color: firebrick;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .curiosidades-box {
+        grid-column: 1 / 4;
+        grid-row: 3;
+        background-color: #f8fafc;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      .curiosidades-list {
+        list-style-type: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 15px;
+        margin-top: 15px;
+      }
+
+      .curiosidades-list li {
+        background: white;
+        padding: 15px;
+        border-radius: 8px;
+        border-left: 4px solid steelblue;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Estilização das imagens ilustrativas (Pixabay) posicionadas na grelha */
+      .imagem-box-1 {
+        grid-column: 3;
+        grid-row: 2;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .imagem-box-1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      /* Responsividade para telemóveis (colapsa a grelha para uma coluna única) */
+      @media (max-width: 768px) {
+        .info-grid-container {
+          grid-template-columns: 1fr;
+        }
+        .intro-box,
+        .tabela-box,
+        .espaco-vazio,
+        .imagem-box-1,
+        .curiosidades-box {
+          grid-column: 1;
+          grid-row: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Barreiro</h1>
+      <nav class="menu-cidades" aria-label="Menu Principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="local.html">Localização</a></li>
+          <li><a href="multimedia.html">Multimédia</a></li>
+          <li><a href="info.html">Informações</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="info-grid-container">
+        <!-- Bloco de Introdução -->
+        <section class="intro-box">
+          <h2>Informação Institucional e Geográfica</h2>
+          <p>A minha cidade é muito linda!!</p>
+        </section>
+
+        <!-- Espaço em branco propositado para respiro visual (White Space) -->
+        <div class="espaco-vazio"></div>
+
+        <!-- Tabela  -->
+        <section class="tabela-box">
+          <table>
+            <tbody>
+              <tr>
+                <th scope="rowgroup" rowspan="2">Demografia</th>
+                <th scope="row">População</th>
+                <td>Aprox. 78.000 hab</td>
+              </tr>
+              <tr>
+                <th scope="row">Densidade Populacional</th>
+                <td>Aprox. 2.300 hab/km²</td>
+              </tr>
+              <tr>
+                <th scope="rowgroup" rowspan="3">Geografia</th>
+                <th scope="row">Área</th>
+                <td>31,77 km²</td>
+              </tr>
+              <tr>
+                <th scope="row">Região</th>
+                <td>Área Metropolitana de Lisboa</td>
+              </tr>
+              <tr>
+                <th scope="row">Distrito</th>
+                <td>Setúbal</td>
+              </tr>
+              <tr>
+                <th scope="colgroup" colspan="2">Website Oficial</th>
+                <td>
+                  <a
+                    href="https://www.cm-barreiro.pt"
+                    class="link-site"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >www.cm-barreiro.pt</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- Elemento visual com imagem -->
+        <div class="imagem-box-1">
+          <img
+            src="https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg"
+            alt="Paisagem urbana e arquitetura"
+          />
+        </div>
+
+        <!-- Curiosidades -->
+        <section class="curiosidades-box">
+          <h2>5 Curiosidades sobre o Barreiro</h2>
+          <ul class="curiosidades-list">
+            <li>
+              <strong>Passado Industrial:</strong> O Barreiro foi um dos maiores
+              polos industriais de Portugal no século XX, destacando-se fábricas
+              como a CUF (Companhia União Fabrile), que moldou a economia e a
+              arquitetura da região.
+            </li>
+            <li>
+              <strong>Tradição Fluvial:</strong> Historicamente, a ligação a
+              Lisboa sempre foi muito forte através dos emblemáticos
+              "Cacilheiros" (barcos de cruzamento do rio Tejo).
+            </li>
+            <li>
+              <strong>Reserva Natural:</strong> O concelho abriga a Reserva
+              Natural Local do Sapal do Rio Coina, um importante santuário para
+              aves aquáticas e rica biodiversidade estuarina.
+            </li>
+            <li>
+              <strong>Património Ferroviário:</strong> A Estação Ferroviária do
+              Barreiro teve um papel histórico fulcral na ligação entre o sul do
+              país (Algarve e Alentejo) e a capital.
+            </li>
+            <li>
+              <strong>Arte Urbana:</strong> A cidade possui vários murais de
+              arte urbana de grande escala espalhados pelas paredes de
+              edifícios, homenageando a sua herança operária.
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p>Universidade Lusófona 2026</p>
+    </footer>
+  </body>
+</html>

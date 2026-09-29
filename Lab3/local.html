@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Barreiro - Localização</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Layout principal da secção de localização usando Flexbox */
+      .localizacao-container {
+        display: flex;
+        flex-direction: column; /* No telemóvel: texto fica por cima do mapa */
+        gap: 30px;
+        align-items: center;
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 0 20px;
+      }
+
+      .localizacao-texto {
+        flex: 1;
+        font-size: 1.1em;
+        line-height: 1.6;
+        color: #333;
+      }
+
+      .localizacao-mapa {
+        flex: 1;
+        width: 100%;
+      }
+
+      .localizacao-mapa iframe {
+        width: 100%;
+        height: 400px;
+        border: 0;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Media Query para PC / Ecrãs largos: Texto ao lado do mapa */
+      @media (min-width: 768px) {
+        .localizacao-container {
+          flex-direction: row; /* Lado a lado no PC */
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Barreiro</h1>
+      <nav class="menu-cidades" aria-label="Menu Principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="local.html">Localização</a></li>
+          <li><a href="multimedia.html">Multimédia</a></li>
+          <li><a href="info.html">Informações</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Localização</h2>
+
+      <section class="localizacao-container">
+        <!-- Sobre a cidade -->
+        <div class="localizacao-texto">
+          <p>
+            O Barreiro é uma cidade portuguesa localizada no distrito de
+            Setúbal, inserida na Área Metropolitana de Lisboa. Situada na margem
+            sul do estuário do rio Tejo, a cidade tem uma forte ligação
+            histórica à atividade fluvial e ferroviária, funcionando como um
+            ponto estratégico de travessia e ligação entre a região sul do país
+            e a capital. A sua envolvente ribeirinha e os espaços naturais, como
+            o Sapal do Rio Coina e as praias fluviais, marcam a identidade
+            geográfica única da região.
+          </p>
+        </div>
+
+        <!-- Mapa num iframe -->
+        <div class="localizacao-mapa">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49876.54519965949!2d-9.1051515!3d38.6655075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19430c5e62bf65%3A0x400ebbde49036c0!2sBarreiro!5e0!3m2!1spt-PT!2spt!4v1650000000000!5m2!1spt-PT!2spt"
+            title="Mapa de localização do Barreiro"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Universidade Lusófona 2026</p>
+    </footer>
+  </body>
+</html>

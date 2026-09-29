@@ -2,39 +2,93 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <title>Primeira Página</title>
+    <title>Portfólio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <p>Eis a minha primeira página Web!</p>
-      <p>
-        Na Unidade Curricular de
-        <a
-          href="https://moodle.ensinolusofona.pt/course/view.php?id=27320"
-          target="_blank"
-        >
-          Desenvolvimento de Interfaces Web
-        </a>
-        abordaremos as seguintes tecnologias web &#12776;:
-      </p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React e Next.js</li>
-      </ul>
-      <p>Iremos criar soluções criativas!</p>
-      <nav>
-        <ul>
-          <li><a href="Lab1/index.html">Lab1</a></li>
-          <li><a href="Lab2/index.html">Lab2</a></li>
-          <li><a href="Quiz | Lab3/">Quiz | Lab3</a></li>
-        </ul>
-      </nav>
+    <!--Hero Image -->
+    <section id="inicio" class="hero-section">
+      <header>
+        <nav aria-label="Menu Principal">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#disciplina">Interfaces Web</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="hero-content">
+        <p>Bem-vindo ao meu portfólio.</p>
+        <a href="#projetos" class="cta-button">Ver Projetos</a>
+      </div>
+    </section>
 
-      <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web" />
-    </main>
+    <!-- Projetos -->
+    <section id="projetos" class="projects-section">
+      <h2>Laboratórios</h2>
+      <div class="projects-container">
+        <div class="card">
+          <h3>Lab 1</h3>
+          <a href="Lab1/index.html">Aceder</a>
+        </div>
+        <div class="card">
+          <h3>Lab 2</h3>
+          <a href="Lab2/index.html">Aceder</a>
+        </div>
+        <div class="card">
+          <h3>Quiz / Lab 3</h3>
+          <a href="Quiz | Lab3/">Aceder</a>
+        </div>
+        <div class="card">
+          <h3>Lab 3</h3>
+          <a href="Lab3/index.html">Aceder</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disciplina DIW -->
+    <section id="disciplina" class="disc-section">
+      <main class="disc-container">
+        <div class="disc-text">
+          <p>Eis a minha primeira página Web!</p>
+          <p>
+            Na Unidade Curricular de
+            <a
+              href="https://moodle.ensinolusofona.pt/course/view.php?id=27320"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Desenvolvimento de Interfaces Web
+            </a>
+            abordaremos as seguintes tecnologias web 🌍:
+          </p>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React e Next.js</li>
+          </ul>
+          <p>Iremos criar soluções criativas!</p>
+
+          <nav aria-label="Menu de Laboratórios">
+            <ul>
+              <li><a href="Lab1/index.html">Lab1</a></li>
+              <li><a href="Lab2/index.html">Lab2</a></li>
+              <li><a href="Quiz | Lab3/">Quiz | Lab3</a></li>
+              <li><a href="Lab3/index.html">Lab3</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="disc-image">
+          <img
+            src="images/diw.svg"
+            alt="Desenvolvimento de Interfaces Web"
+            class="wordcloud-img"
+          />
+        </div>
+      </main>
+    </section>
 
     <footer>
       <p>Universidade Lusófona 2026</p>
