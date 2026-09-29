@@ -31,7 +31,9 @@ body {
   font-weight: bold;
   padding: 6px 12px;
   border-radius: 4px;
-  transition: background 0.3s, color 0.3s;
+  transition:
+    background 0.3s,
+    color 0.3s;
 }
 
 .menu-cidades a:hover {
