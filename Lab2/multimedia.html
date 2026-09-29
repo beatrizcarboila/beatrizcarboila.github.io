@@ -9,11 +9,24 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 15px;
+        justify-content: center;
+      }
+      .fotografias figure {
+        margin: 0;
+        text-align: center;
       }
       .fotografias img {
         max-width: 150px;
+        height: 100px;
+        object-fit: cover;
         border-radius: 20px;
+      }
+      .fotografias figcaption {
+        font-size: 0.85em;
+        color: #333;
+        margin-top: 5px;
+        max-width: 150px;
       }
       .poema {
         max-width: 600px;
@@ -40,6 +53,9 @@
         margin-top: 15px;
         font-weight: bold;
         color: #8e44ad;
+      }
+      .video-iframe {
+        border: 0;
       }
     </style>
   </head>
