@@ -2,45 +2,123 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <title>Barreiro - Localização</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Localização</title>
+    <link rel="stylesheet" href="styles.css" />
     <style>
-      /* Layout principal da secção de localização usando Flexbox */
+      /* Cabeçalho e Menu de Navegação Unificado */
+      header {
+        background-color: #1e293b;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      header h1 {
+        margin: 0 0 15px 0;
+        font-size: 2.2em;
+        letter-spacing: 1px;
+      }
+
+      nav.menu-cidades,
+      header nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      nav.menu-cidades ul,
+      header nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav.menu-cidades ul li a,
+      header nav ul li a,
+      header nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.05);
+        transition:
+          background-color 0.3s ease,
+          transform 0.3s ease,
+          color 0.3s ease;
+      }
+
+      nav.menu-cidades ul li a:hover,
+      header nav ul li a:hover,
+      header nav a:hover {
+        background-color: #38bdf8;
+        color: #0f172a;
+        transform: translateY(-2px);
+      }
+
+      /* Layout Flexbox específico para a página de localização */
       .localizacao-container {
         display: flex;
-        flex-direction: column; /* No telemóvel: texto fica por cima do mapa */
-        gap: 30px;
+        flex-direction: row; /* PC: texto ao lado do mapa */
         align-items: center;
-        max-width: 1100px;
+        gap: 30px;
+        max-width: 1200px;
         margin: 40px auto;
         padding: 0 20px;
       }
 
-      .localizacao-texto {
+      .texto-localizacao {
         flex: 1;
-        font-size: 1.1em;
-        line-height: 1.6;
-        color: #333;
       }
 
-      .localizacao-mapa {
+      .texto-localizacao h2 {
+        margin-top: 0;
+        color: darkblue;
+      }
+
+      .mapa-localizacao {
         flex: 1;
         width: 100%;
       }
 
-      .localizacao-mapa iframe {
+      .mapa-localizacao iframe {
         width: 100%;
         height: 400px;
-        border: 0;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
-      /* Media Query para PC / Ecrãs largos: Texto ao lado do mapa */
-      @media (min-width: 768px) {
+      /* Responsividade unificada e da localização */
+      @media (max-width: 768px) {
+        nav.menu-cidades ul,
+        header nav ul {
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+        }
+
+        nav.menu-cidades ul li,
+        header nav ul li {
+          width: 100%;
+          text-align: center;
+        }
+
+        nav.menu-cidades ul li a,
+        header nav ul li a,
+        header nav a {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
+
         .localizacao-container {
-          flex-direction: row; /* Lado a lado no PC */
-          align-items: flex-start;
+          flex-direction: column; /* Telemóvel: texto em cima, mapa em baixo */
+          gap: 20px;
         }
       }
     </style>
@@ -50,7 +128,7 @@
       <h1>Barreiro</h1>
       <nav class="menu-cidades" aria-label="Menu Principal">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="../index.html">Home</a></li>
           <li><a href="local.html">Localização</a></li>
           <li><a href="multimedia.html">Multimédia</a></li>
           <li><a href="info.html">Informações</a></li>
@@ -59,11 +137,9 @@
     </header>
 
     <main>
-      <h2>Localização</h2>
-
-      <section class="localizacao-container">
-        <!-- Sobre a cidade -->
-        <div class="localizacao-texto">
+      <div class="localizacao-container">
+        <div class="texto-localizacao">
+          <h2>Localização</h2>
           <p>
             O Barreiro é uma cidade portuguesa localizada no distrito de
             Setúbal, inserida na Área Metropolitana de Lisboa. Situada na margem
@@ -76,17 +152,16 @@
           </p>
         </div>
 
-        <!-- Mapa num iframe -->
-        <div class="localizacao-mapa">
+        <div class="mapa-localizacao">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d49876.54519965949!2d-9.1051515!3d38.6655075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19430c5e62bf65%3A0x400ebbde49036c0!2sBarreiro!5e0!3m2!1spt-PT!2spt!4v1650000000000!5m2!1spt-PT!2spt"
-            title="Mapa de localização do Barreiro"
+            style="border: 0"
             allowfullscreen=""
             loading="lazy"
-          >
-          </iframe>
+            title="Mapa de localização do Barreiro"
+          ></iframe>
         </div>
-      </section>
+      </div>
     </main>
 
     <footer>

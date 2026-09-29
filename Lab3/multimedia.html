@@ -2,100 +2,82 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <title>Multimédia</title>
+    <title>Barreiro</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      .sec-fotografias {
-        height: 100vh;
-        background-color: #eef2f3;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      /* Cabeçalho e Menu de Navegação Unificado */
+      header {
+        background-color: #1e293b;
+        color: #ffffff;
         padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
-      .sec-destaque {
-        height: 100vh;
-        background-color: #2c3e50;
-        position: relative;
+
+      header h1 {
+        margin: 0 0 15px 0;
+        font-size: 2.2em;
+        letter-spacing: 1px;
+      }
+
+      nav.menu-cidades,
+      header nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
       }
-      .sec-video-bg {
-        height: 100vh;
-        position: relative;
+
+      nav.menu-cidades ul,
+      header nav ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
-        color: white;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      nav.menu-cidades ul li a,
+      header nav ul li a,
+      header nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.05);
+        transition:
+          background-color 0.3s ease,
+          transform 0.3s ease,
+          color 0.3s ease;
+      }
+
+      nav.menu-cidades ul li a:hover,
+      header nav ul li a:hover,
+      header nav a:hover {
+        background-color: #38bdf8;
+        color: #0f172a;
+        transform: translateY(-2px);
+      }
+
+      /* Cores de fundo diferentes para diferenciar os conteúdos das secções */
+      .section-fotografias {
+        background-color: #f8f9fa;
+        padding: 40px 20px;
+      }
+
+      .section-video {
+        background-color: #e9ecef;
+        padding: 40px 20px;
         text-align: center;
       }
-      .video-background {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        min-width: 100%;
-        min-height: 100%;
-        z-index: 1;
-        object-fit: cover;
+
+      .section-poesia {
+        background-color: #dee2e6;
+        padding: 40px 20px;
       }
-      .video-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgb(0 0 0 / 50%);
-        z-index: 2;
-      }
-      .video-bg-content {
-        position: relative;
-        z-index: 3;
-        max-width: 700px;
-        padding: 20px;
-      }
-      .sec-parallax {
-        height: 100vh;
-        background-image: url("https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg");
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-        text-align: center;
-      }
-      .parallax-content {
-        background: rgb(0 0 0 / 60%);
-        padding: 30px 50px;
-        border-radius: 12px;
-        max-width: 600px;
-      }
-      .sec-video {
-        height: 100vh;
-        background-color: #f9f9f9;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-      }
-      .sec-poema {
-        height: 100vh;
-        background-color: #f4ecf7;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        overflow-y: auto;
-      }
+
       .fotografias {
         display: flex;
         flex-direction: row;
@@ -113,82 +95,172 @@
         object-fit: cover;
         border-radius: 20px;
         transition:
-          transform 0.4s ease,
-          filter 0.4s ease,
-          box-shadow 0.4s ease;
+          transform 0.3s ease,
+          filter 0.3s ease;
       }
+
       .fotografias img:hover {
-        transform: scale(1.1) rotate(2deg);
+        transform: scale(1.08);
         filter: brightness(1.1);
-        box-shadow: 0 10px 20px rgb(0 0 0 / 30%);
       }
-      .banner-emblematico {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        filter: brightness(0.7);
+
+      .fotografias figcaption {
+        font-size: 0.85em;
+        color: #333;
+        margin-top: 5px;
+        max-width: 150px;
       }
-      .frase-destaque {
-        position: absolute;
-        bottom: 10%;
-        left: 5%;
-        color: #ffffff;
-        font-weight: bold;
-        font-size: 3.5vw;
-        text-shadow: 2px 2px 8px rgb(0 0 0 / 80%);
-        background: rgb(0 0 0 / 40%);
-        padding: 15px 30px;
-        border-radius: 10px;
-        z-index: 2;
-      }
+
       .poema {
         max-width: 600px;
+        margin: 40px auto;
         padding: 20px;
         background: #ffffff;
         border-radius: 12px;
         font-family: Georgia, serif;
         line-height: 1.6;
         text-align: center;
-        box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
       }
-      .menu-interno-multimedia {
+      .poema p:nth-child(1) {
+        font-weight: bold;
+        font-size: 1.3em;
+        color: #2c3e50;
+      }
+      .poema p:nth-child(even) {
+        color: #555;
+      }
+      .poema p:nth-child(4n) {
+        color: #2980b9;
+      }
+      .poema p:last-child {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #8e44ad;
+      }
+      .video-iframe {
+        border: 0;
+      }
+
+      .banner-emblematico {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      .banner-emblematico img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .frase-emblematica {
+        position: absolute;
+        bottom: 20px;
+        left: 30px;
+        color: #ffffff;
+        font-size: 3.5vw;
+        font-weight: bold;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.4);
+        padding: 10px 20px;
+        border-radius: 6px;
+      }
+
+      .section-video-bg {
+        position: relative;
+        width: 100%;
+        height: 400px;
+        background-image: url("https://cdn.pixabay.com/photo/2016/11/29/04/19/ocean-1867285_1280.jpg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+      }
+
+      .video-bg-content {
+        position: relative;
+        z-index: 2;
+        color: #ffffff;
         text-align: center;
-        padding: 10px;
-        background: #e2e8f0;
-        position: sticky;
-        top: 0;
-        z-index: 100;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 20px 40px;
+        border-radius: 8px;
+      }
+
+      .section-parallax {
+        background-image: url("https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_1280.jpg");
+        height: 350px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        text-align: center;
+        margin: 40px 0;
+      }
+
+      .parallax-content {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 25px 40px;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 768px) {
+        nav.menu-cidades ul,
+        header nav ul {
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+        }
+        nav.menu-cidades ul li,
+        header nav ul li {
+          width: 100%;
+          text-align: center;
+        }
+        nav.menu-cidades ul li a,
+        header nav ul li a,
+        header nav a {
+          display: block;
+          width: 100%;
+          box-sizing: border-box;
+        }
       }
     </style>
   </head>
   <body>
     <header>
       <h1>Barreiro</h1>
-      <nav aria-label="Menu Principal">
-        <a href="index.html">Home</a>
-        <a href="local.html">Localização</a>
-        <a href="multimedia.html">Multimédia</a>
-        <a href="info.html">Informações</a>
+      <nav class="menu-cidades" aria-label="Menu Principal">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="local.html">Localização</a></li>
+          <li><a href="multimedia.html">Multimédia</a></li>
+          <li><a href="info.html">Informações</a></li>
+        </ul>
       </nav>
     </header>
 
     <main>
-      <nav
-        aria-label="Menu de Navegação Interna"
-        class="menu-interno-multimedia"
-      >
-        <a href="#fotografias">Fotografias</a> |
-        <a href="#destaque">Foto Destaque</a> |
-        <a href="#videobg">Vídeo BG</a> | <a href="#parallax">Parallax</a> |
-        <a href="#video">Vídeo YouTube</a> |
-        <a href="#poema">Poema</a>
+      <h2>Multimédia</h2>
+      <p>Nesta página encontra conteúdos multimédia.</p>
+      <nav aria-label="Menu de Navegação Interna">
+        <ul>
+          <li><a href="#fotografias">Fotografias</a></li>
+          <li><a href="#video">Vídeo</a></li>
+          <li><a href="#poema">Poema</a></li>
+        </ul>
       </nav>
 
-      <section id="fotografias" class="sec-fotografias">
-        <h3>Fotografias</h3>
+      <section class="section-fotografias">
+        <h3 id="fotografias">Fotografias</h3>
         <div class="fotografias">
           <figure>
             <img src="imagens/Barcosbarreiro.jpg" alt="Barcos" />
@@ -206,14 +278,14 @@
               src="imagens/estacaoantigabarreiro.jpg"
               alt="Antiga estação Ferroviária"
             />
-            <figcaption>Estação Antiga</figcaption>
+            <figcaption>Antiga Estação</figcaption>
           </figure>
           <figure>
             <img
               src="imagens/Igrejabarreiro.jpg"
               alt="Igreja Nossa Senhora do Rosário"
             />
-            <figcaption>Igreja</figcaption>
+            <figcaption>Igreja Nª Srª do Rosário</figcaption>
           </figure>
           <figure>
             <img src="imagens/moinhobarreiro.webp" alt="Alto dos Moinho" />
@@ -235,52 +307,29 @@
               src="imagens/praiabarreito.jpg"
               alt="Praia Fluvial da Alburrica"
             />
-            <figcaption>Alburrica</figcaption>
+            <figcaption>Praia da Alburrica</figcaption>
           </figure>
         </div>
       </section>
 
-      <section id="destaque" class="sec-destaque">
+      <section class="banner-emblematico">
         <img
-          src="imagens/Barcosbarreiro.jpg"
+          src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
           alt="Fotografia Emblemática do Barreiro"
-          class="banner-emblematico"
         />
-        <h2 class="frase-destaque">Barreiro: Terra de Cais, Rio e Memória.</h2>
-      </section>
-
-      <section id="videobg" class="sec-video-bg">
-        <video autoplay muted loop playsinline class="video-background">
-          <source src="videos/video-barreiro.mp4" type="video/mp4" />
-          O seu navegador não suporta vídeos em HTML5.
-        </video>
-        <div class="video-overlay"></div>
-        <div class="video-bg-content">
-          <h2>A Calma do Rio Tejo</h2>
-          <p>
-            Imagens em movimento que capturam a essência ribeirinha da cidade.
-          </p>
+        <div class="frase-emblematica">
+          Barreiro: Cais, Memória e Futuro no Tejo
         </div>
       </section>
 
-      <section id="parallax" class="sec-parallax">
-        <div class="parallax-content">
-          <h2>Património e Futuro</h2>
-          <p>
-            O efeito parallax confere dinamismo e profundidade visual ao navegar
-            pela história do Barreiro.
-          </p>
-        </div>
-      </section>
-
-      <section id="video" class="sec-video">
-        <h3 style="margin-bottom: 20px">Vídeo Institucional</h3>
+      <section class="section-video">
+        <h3 id="video">Video</h3>
         <iframe
-          class="video-iframe"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/KaqFhRtMAgQ?si=HFgrBF2fJj2NuqQI"
           title="YouTube video player"
+          class="video-iframe"
           allow="
             accelerometer;
             autoplay;
@@ -295,8 +344,15 @@
         ></iframe>
       </section>
 
-      <section id="poema" class="sec-poema">
-        <h3 id="poema-titulo" style="margin-bottom: 20px">Poema</h3>
+      <section class="section-video-bg">
+        <div class="video-bg-content">
+          <h3>Dinâmica Fluvial</h3>
+          <p>A serenidade e o movimento das águas do Tejo.</p>
+        </div>
+      </section>
+
+      <section class="section-poesia">
+        <h3 id="poema">Poema</h3>
         <div class="poema">
           <p>À beira do Tejo nasceste,</p>
           <p>terra de cais e de partida,</p>
@@ -322,6 +378,15 @@
           <p>terra de voz operária,</p>
           <p>tu és raiz e és futuro,</p>
           <p>tu és poesia diária.</p>
+        </div>
+      </section>
+
+      <section class="section-parallax">
+        <div class="parallax-content">
+          <h3>Património e Identidade</h3>
+          <p>
+            Explore os recantos históricos e a beleza paisagística da região.
+          </p>
         </div>
       </section>
     </main>

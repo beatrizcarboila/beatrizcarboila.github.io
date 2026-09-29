@@ -1,13 +1,13 @@
-/* Estilo base do menu de navegação (Desktop) */
-.menu-interno-multimedia {
-  text-align: center;
-  padding: 10px;
-  background: #e2e8f0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+/* Estilo base e fundo geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
+/* Menu de navegação das páginas da cidade */
 .menu-cidades {
   background-color: #f0f4f8;
   padding: 10px 20px;
@@ -31,9 +31,7 @@
   font-weight: bold;
   padding: 6px 12px;
   border-radius: 4px;
-  transition:
-    background 0.3s,
-    color 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
 .menu-cidades a:hover {
@@ -41,14 +39,31 @@
   color: white;
 }
 
-/* Responsividade para Telemóvel / Ecrãs Pequenos (@media query moderna) */
+/* Menu interno de multimédia */
+.menu-interno-multimedia {
+  text-align: center;
+  padding: 10px;
+  background: #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #1a252f;
+  color: white;
+}
+
+/* Responsividade para telemóveis */
 @media (width <= 768px) {
   .menu-cidades {
     padding: 10px;
   }
 
   .menu-cidades ul {
-    flex-direction: column; /* Transforma o menu horizontal em vertical no telemóvel */
+    flex-direction: column;
     align-items: center;
     gap: 10px;
     width: 100%;
