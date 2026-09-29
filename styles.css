@@ -25,7 +25,9 @@ section {
 
 /* 1. Secção Hero Image */
 .hero-section {
-  background-image: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)), url('images/hero-bg.webp');
+  background-image:
+    linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+    url("images/hero-bg.webp");
   background-size: cover;
   color: white;
   position: relative;
@@ -175,5 +177,7 @@ footer {
   text-align: center;
   padding: 15px;
   background-color: #fee8f5;
-  color: rgb(252 92 193 / 100%); /* Corrigido para notação moderna de cor com canal alfa/compatibilidade */
+  color: rgb(
+    252 92 193 / 100%
+  ); /* Corrigido para notação moderna de cor com canal alfa/compatibilidade */
 }
