@@ -41,8 +41,8 @@
   color: white;
 }
 
-/* Responsividade para Telemóvel / Ecrãs Pequenos (@media query) */
-@media (max-width: 768px) {
+/* Responsividade para Telemóvel / Ecrãs Pequenos (@media query moderna) */
+@media (width <= 768px) {
   .menu-cidades {
     padding: 10px;
   }

@@ -2,10 +2,9 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <title>Barreiro - Multimédia</title>
+    <title>Multimédia</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      /* Altura de 100vh e cores de fundo diferentes para diferenciar as secções */
       .sec-fotografias {
         height: 100vh;
         background-color: #eef2f3;
@@ -15,7 +14,6 @@
         align-items: center;
         padding: 20px;
       }
-
       .sec-destaque {
         height: 100vh;
         background-color: #2c3e50;
@@ -25,8 +23,6 @@
         align-items: center;
         overflow: hidden;
       }
-
-      /* Nova Secção: Vídeo Background */
       .sec-video-bg {
         height: 100vh;
         position: relative;
@@ -37,7 +33,6 @@
         color: white;
         text-align: center;
       }
-
       .video-background {
         position: absolute;
         top: 50%;
@@ -45,44 +40,26 @@
         transform: translate(-50%, -50%);
         min-width: 100%;
         min-height: 100%;
-        width: auto;
-        height: auto;
         z-index: 1;
         object-fit: cover;
       }
-
       .video-overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(
-          0,
-          0,
-          0,
-          0.5
-        ); /* Camada escura por cima do vídeo */
+        background-color: rgb(0 0 0 / 50%);
         z-index: 2;
       }
-
       .video-bg-content {
         position: relative;
         z-index: 3;
         max-width: 700px;
         padding: 20px;
       }
-
-      .video-bg-content h2 {
-        font-size: 3rem;
-        margin-bottom: 15px;
-        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-      }
-
-      /* Nova Secção: Efeito Paralaxe (Parallax) */
       .sec-parallax {
         height: 100vh;
-        /* Imagem de fundo fixa que cria o efeito parallax */
         background-image: url("https://cdn.pixabay.com/photo/2016/11/18/17/46/house-1836070_1280.jpg");
         background-attachment: fixed;
         background-position: center;
@@ -93,22 +70,13 @@
         align-items: center;
         color: white;
         text-align: center;
-        position: relative;
       }
-
       .parallax-content {
-        background: rgba(0, 0, 0, 0.6);
+        background: rgb(0 0 0 / 60%);
         padding: 30px 50px;
         border-radius: 12px;
         max-width: 600px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
       }
-
-      .parallax-content h2 {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
-
       .sec-video {
         height: 100vh;
         background-color: #f9f9f9;
@@ -118,7 +86,6 @@
         align-items: center;
         padding: 20px;
       }
-
       .sec-poema {
         height: 100vh;
         background-color: #f4ecf7;
@@ -129,8 +96,6 @@
         padding: 20px;
         overflow-y: auto;
       }
-
-      /* Fotografias em grelha flexível */
       .fotografias {
         display: flex;
         flex-direction: row;
@@ -138,13 +103,10 @@
         gap: 15px;
         justify-content: center;
       }
-
       .fotografias figure {
         margin: 0;
         text-align: center;
       }
-
-      /* Transição aplicada nas imagens pequenas */
       .fotografias img {
         max-width: 150px;
         height: 100px;
@@ -155,22 +117,11 @@
           filter 0.4s ease,
           box-shadow 0.4s ease;
       }
-
-      /* Efeito visual ao passar o rato (Hover com Transição) */
       .fotografias img:hover {
         transform: scale(1.1) rotate(2deg);
         filter: brightness(1.1);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 10px 20px rgb(0 0 0 / 30%);
       }
-
-      .fotografias figcaption {
-        font-size: 0.85em;
-        color: #333;
-        margin-top: 5px;
-        max-width: 150px;
-      }
-
-      /* Fotografia emblemática a ocupar toda a largura */
       .banner-emblematico {
         width: 100%;
         height: 100%;
@@ -180,8 +131,6 @@
         left: 0;
         filter: brightness(0.7);
       }
-
-      /* Frase emblemática com position absolute e tamanho em vw */
       .frase-destaque {
         position: absolute;
         bottom: 10%;
@@ -189,14 +138,12 @@
         color: #ffffff;
         font-weight: bold;
         font-size: 3.5vw;
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-        background: rgba(0, 0, 0, 0.4);
+        text-shadow: 2px 2px 8px rgb(0 0 0 / 80%);
+        background: rgb(0 0 0 / 40%);
         padding: 15px 30px;
         border-radius: 10px;
         z-index: 2;
       }
-
-      /* Estilização do Poema */
       .poema {
         max-width: 600px;
         padding: 20px;
@@ -205,28 +152,15 @@
         font-family: Georgia, serif;
         line-height: 1.6;
         text-align: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 10px rgb(0 0 0 / 10%);
       }
-      .poema p:nth-child(1) {
-        font-weight: bold;
-        font-size: 1.3em;
-        color: #2c3e50;
-      }
-      .poema p:nth-child(even) {
-        color: #555;
-      }
-      .poema p:nth-child(4n) {
-        color: #2980b9;
-      }
-      .poema p:last-child {
-        margin-top: 15px;
-        font-weight: bold;
-        color: #8e44ad;
-      }
-      .video-iframe {
-        border: 0;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      .menu-interno-multimedia {
+        text-align: center;
+        padding: 10px;
+        background: #e2e8f0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
       }
     </style>
   </head>
@@ -242,7 +176,6 @@
     </header>
 
     <main>
-      <!-- Menu Interno de Atalhos Atualizado -->
       <nav
         aria-label="Menu de Navegação Interna"
         class="menu-interno-multimedia"
@@ -254,7 +187,6 @@
         <a href="#poema">Poema</a>
       </nav>
 
-      <!-- Secção 1: Fotografias com Transição -->
       <section id="fotografias" class="sec-fotografias">
         <h3>Fotografias</h3>
         <div class="fotografias">
@@ -308,7 +240,6 @@
         </div>
       </section>
 
-      <!-- Fotografia Emblemática (Width 100% e Position Absolute/Relative) -->
       <section id="destaque" class="sec-destaque">
         <img
           src="imagens/Barcosbarreiro.jpg"
@@ -318,8 +249,6 @@
         <h2 class="frase-destaque">Barreiro: Terra de Cais, Rio e Memória.</h2>
       </section>
 
-      <!-- Vídeo Background (Pixabay) -->
-      <
       <section id="videobg" class="sec-video-bg">
         <video autoplay muted loop playsinline class="video-background">
           <source src="videos/video-barreiro.mp4" type="video/mp4" />
@@ -334,7 +263,6 @@
         </div>
       </section>
 
-      <!--  Efeito Paralaxe (Parallax) -->
       <section id="parallax" class="sec-parallax">
         <div class="parallax-content">
           <h2>Património e Futuro</h2>
@@ -345,7 +273,6 @@
         </div>
       </section>
 
-      <!--  Vídeo YouTube -->
       <section id="video" class="sec-video">
         <h3 style="margin-bottom: 20px">Vídeo Institucional</h3>
         <iframe
@@ -368,7 +295,6 @@
         ></iframe>
       </section>
 
-      <!-- Poema -->
       <section id="poema" class="sec-poema">
         <h3 id="poema-titulo" style="margin-bottom: 20px">Poema</h3>
         <div class="poema">
