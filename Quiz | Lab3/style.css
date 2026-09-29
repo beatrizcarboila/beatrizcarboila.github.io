@@ -7,13 +7,10 @@
 body {
   height: 100vh;
   display: grid;
-
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 6fr 1fr;
-  grid-template-areas:
-    "header header"
-    "main sidebar"
-    "footer footer";
+  grid-template:
+    "header header" 1fr
+    "main sidebar" 6fr
+    "footer footer" 1fr / 3fr 1fr;
   background-color: aquamarine;
 }
 
@@ -32,7 +29,7 @@ header * {
   background: red;
 }
 
-aside.Sabiasque {
+aside.sabias-que {
   grid-area: sidebar;
   background-color: greenyellow;
   color: white;
@@ -41,7 +38,7 @@ aside.Sabiasque {
 }
 
 main section {
-  background-color: rgba(255, 0, 0, 0.345);
+  background-color: rgb(255 0 0 / 34.5%);
   color: white;
   padding: 15px;
   margin: 10px;
@@ -50,12 +47,12 @@ main section {
 
 footer {
   grid-area: footer;
-  background-color: rgb(128, 0, 92);
+  background-color: rgb(128 0 92);
   color: white;
   padding: 15px;
   border-radius: 4px;
 }
 
-.canções ul {
+.cancoes ul {
   margin-left: 20px;
 }
