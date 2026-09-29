@@ -5,25 +5,18 @@
     <title>Barreiro</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-      }
-
+      /* Cabeçalho e Menu de Navegação Unificado */
       header {
-        width: 100%;
         background-color: #1e293b;
         color: #ffffff;
-        padding: 25px 0;
+        padding: 20px;
         text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        box-sizing: border-box;
       }
 
       header h1 {
         margin: 0 0 15px 0;
-        font-size: 2.4em;
+        font-size: 2.2em;
         letter-spacing: 1px;
       }
 
@@ -32,8 +25,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        background: transparent !important;
       }
 
       nav.menu-cidades ul,
@@ -55,7 +46,7 @@
         font-weight: 600;
         padding: 10px 20px;
         border-radius: 6px;
-        background-color: rgba(255, 255, 255, 0.08);
+        background-color: rgba(255, 255, 255, 0.05);
         transition:
           background-color 0.3s ease,
           transform 0.3s ease,
@@ -70,6 +61,7 @@
         transform: translateY(-2px);
       }
 
+      /* Cores de fundo diferentes para diferenciar os conteúdos das secções */
       .section-fotografias {
         background-color: #f8f9fa;
         padding: 40px 20px;
@@ -259,8 +251,6 @@
     <main>
       <h2>Multimédia</h2>
       <p>Nesta página encontra conteúdos multimédia.</p>
-
-      <!-- Corrigido para incluir ul/li corretos no menu interno -->
       <nav aria-label="Menu de Navegação Interna">
         <ul>
           <li><a href="#fotografias">Fotografias</a></li>
