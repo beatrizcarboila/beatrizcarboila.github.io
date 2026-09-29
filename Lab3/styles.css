@@ -1,4 +1,13 @@
 /* Estilo base do menu de navegação (Desktop) */
+.menu-interno-multimedia {
+  text-align: center;
+  padding: 10px;
+  background: #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
 .menu-cidades {
   background-color: #f0f4f8;
   padding: 10px 20px;
@@ -22,7 +31,9 @@
   font-weight: bold;
   padding: 6px 12px;
   border-radius: 4px;
-  transition: background 0.3s, color 0.3s;
+  transition:
+    background 0.3s,
+    color 0.3s;
 }
 
 .menu-cidades a:hover {
