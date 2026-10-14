@@ -1,0 +1,26 @@
+  body {
+        font-family: Arial, sans-serif;
+        margin: 30px;
+      }
+      .section {
+        margin-bottom: 20px;
+      }
+
+
+#flex-container {
+    height: 200px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row; /* Começa em linha por defeito */
+    gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+/*Paras bolas coloridas função 4*/
+.bola {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-block;
+}

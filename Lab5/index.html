@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laboratório 4 - Emoções e Humor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Função 1. -->
+    <div class="bloco">
+      <p
+        id="texto-hover"
+        onmouseover="mudarTexto()"
+        onmouseout="restaurarTexto()"
+      >
+        Passa por aqui!
+      </p>
+    </div>
+
+    <!-- Função 2. -->
+    <!--Eventos 1.0-->
+    <!--<div class="bloco">
+      <p id="pinta-me">2. Pinta-me!</p>
+      <button onclick="mudarCorTexto('red')">Red</button>
+      <button onclick="mudarCorTexto('green')">Green</button>
+      <button onclick="mudarCorTexto('blue')">Blue</button>
+    </div> -->
+    <!--com data-color e classe color) -->
+    <div class="bloco">
+      <p id="pinta-me">2. Pinta-me!</p>
+      <button class="color" data-color="red">Red</button>
+      <button class="color" data-color="green">Green</button>
+      <button class="color" data-color="blue">Blue</button>
+      <button class="color" data-color="pink">Rosa bebé</button>
+      <button class="color" data-color="lightblue">Azul bebé</button>
+    </div>
+
+    <!-- Função 3. -->
+    <div class="bloco">
+      <label>3. Experienta escrever...</label>
+      <input type="text" id="caixa-cor" oninput="mudarCorCaixa()" />
+    </div>
+
+    <!-- Função 4. -->
+    <!--Eventos 1.0
+    <div class="bloco">
+      <label>4. Escolha uma cor em inglês:</label>
+      <input type="text" id="input-cor-site" />
+      <button onclick="mudarCorSite()">submeter</button>
+    </div>-->
+
+    <!--Com select e this -->
+    <div class="bloco">
+      <label>4. Escolha uma cor:</label>
+      <select id="select-cor-site">
+        <option value="">Selecione...</option>
+        <option value="white">Branco</option>
+        <option value="lightblue">Azul</option>
+        <option value="lightgreen">Verde</option>
+        <option value="lightyellow">Amarelo</option>
+      </select>
+    </div>
+
+    <!-- Função 5. Conta -->
+    <!--Evento 1.0
+    <div class="bloco">
+      <button onclick="incrementarContador()">Conta!</button>
+      <span id="contador">0</span>
+    </div>-->
+
+    <!--Com local Storage-->
+    <div class="bloco">
+      <h3>Contador</h3>
+      <h1 id="contador-valor">0</h1>
+      <button id="btn-incrementar">Incrementar</button>
+      <button id="btn-decrementar">Decrementar</button>
+      <button id="btn-reset">Reset</button>
+    </div>
+
+    <!-- Função 6. Formulário Nome e Idade -->
+    <div class="bloco">
+      <form id="form-utilizador">
+        <input id="nome" type="text" placeholder="Insira o seu nome" />
+        <input id="idade" type="number" placeholder="Insira a sua idade" />
+        <input type="submit" value="Submeter" />
+      </form>
+      <p id="mensagem-utilizador"></p>
+    </div>
+
+    <!-- Função 7.: Temporizador Automático (setInterval) -->
+    <div class="bloco">
+      <h3>Temporizador Automático (1 em 1 segundo)</h3>
+      <h1 id="temporizador-valor">0</h1>
+    </div>
+
+    <!--Select flex-->
+    <div class="bloco">
+      <label>Select Flex (Direção):</label>
+      <select id="select-flex">
+        <option value="row">row</option>
+        <option value="row-reverse">row-reverse</option>
+        <option value="column">column</option>
+        <option value="column-reverse">column-reverse</option>
+      </select>
+
+      <div id="flex-container">
+        <div class="bola" style="background-color: red"></div>
+        <div class="bola" style="background-color: blue"></div>
+        <div class="bola" style="background-color: green"></div>
+        <div class="bola" style="background-color: orange"></div>
+      </div>
+    </div>
+    <!--Para usar o js-->
+    <script src="main.js"></script>
+  </body>
+  <footer>
+    <p>Universidade Lusófona 2026</p>
+  </footer>
+</html>
