@@ -2,19 +2,13 @@
 <html lang="pt">
   <head>
     <meta charset="UTF-8" />
-    <title>Laboratório 5</title>
+    <title>Lab 7</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Função 1. -->
     <div class="bloco">
-      <p
-        id="texto-hover"
-        onmouseover="mudarTexto()"
-        onmouseout="restaurarTexto()"
-      >
-        Passa por aqui!
-      </p>
+      <p id="texto-hover">Passa por aqui!</p>
     </div>
 
     <!-- Função 2. -->
@@ -28,17 +22,19 @@
     <!--com data-color e classe color) -->
     <div class="bloco">
       <p id="pinta-me">2. Pinta-me!</p>
-      <button class="color" data-color="red">Red</button>
-      <button class="color" data-color="green">Green</button>
-      <button class="color" data-color="blue">Blue</button>
-      <button class="color" data-color="pink">Rosa bebé</button>
-      <button class="color" data-color="lightblue">Azul bebé</button>
+      <button type="button" class="color" data-color="red">Red</button>
+      <button type="button" class="color" data-color="green">Green</button>
+      <button type="button" class="color" data-color="blue">Blue</button>
+      <button type="button" class="color" data-color="pink">Rosa bebé</button>
+      <button type="button" class="color" data-color="lightblue">
+        Azul bebé
+      </button>
     </div>
 
     <!-- Função 3. -->
     <div class="bloco">
-      <label>3. Experienta escrever...</label>
-      <input type="text" id="caixa-cor" oninput="mudarCorCaixa()" />
+      <label for="caixa-cor">3. Experienta escrever...</label>
+      <input type="text" id="caixa-cor" />
     </div>
 
     <!-- Função 4. -->
@@ -51,7 +47,7 @@
 
     <!--Com select e this -->
     <div class="bloco">
-      <label>4. Escolha uma cor:</label>
+      <label for="select-cor-site">4. Escolha uma cor:</label>
       <select id="select-cor-site">
         <option value="">Selecione...</option>
         <option value="white">Branco</option>
@@ -70,11 +66,11 @@
 
     <!--Com local Storage-->
     <div class="bloco">
-      <h3>Contador</h3>
+      <h3>Contador Manual</h3>
       <h1 id="contador-valor">0</h1>
-      <button id="btn-incrementar">Incrementar</button>
-      <button id="btn-decrementar">Decrementar</button>
-      <button id="btn-reset">Reset</button>
+      <button type="button" id="btn-incrementar">Incrementar</button>
+      <button type="button" id="btn-decrementar">Decrementar</button>
+      <button type="button" id="btn-reset">Reset</button>
     </div>
 
     <!-- Função 6. Formulário Nome e Idade -->
@@ -82,7 +78,7 @@
       <form id="form-utilizador">
         <input id="nome" type="text" placeholder="Insira o seu nome" />
         <input id="idade" type="number" placeholder="Insira a sua idade" />
-        <input type="submit" value="Submeter" />
+        <button type="submit">Submeter</button>
       </form>
       <p id="mensagem-utilizador"></p>
     </div>
@@ -95,7 +91,7 @@
 
     <!--Select flex-->
     <div class="bloco">
-      <label>Select Flex (Direção):</label>
+      <label for="select-flex">Select Flex (Direção):</label>
       <select id="select-flex">
         <option value="row">row</option>
         <option value="row-reverse">row-reverse</option>
@@ -104,10 +100,10 @@
       </select>
 
       <div id="flex-container">
-        <div class="bola" style="background-color: red"></div>
-        <div class="bola" style="background-color: blue"></div>
-        <div class="bola" style="background-color: green"></div>
-        <div class="bola" style="background-color: orange"></div>
+        <div class="bola bola-vermelha"></div>
+        <div class="bola bola-azul"></div>
+        <div class="bola bola-verde"></div>
+        <div class="bola bola-laranja"></div>
       </div>
     </div>
     <!--Para usar o js-->

@@ -1,26 +1,39 @@
-  body {
-        font-family: Arial, sans-serif;
-        margin: 30px;
-      }
-      .section {
-        margin-bottom: 20px;
-      }
-
-
-#flex-container {
-    height: 200px;
-    background-color: lightgray;
-    display: flex;
-    flex-direction: row; /* Começa em linha por defeito */
-    gap: 10px;
-    margin-top: 10px;
-    align-items: center;
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  transition: background-color 0.3s ease;
 }
 
-/*Paras bolas coloridas função 4*/
+.bloco {
+  margin-bottom: 20px;
+}
+
+/* Estilos para o Select Flex */
+#flex-container {
+  height: 200px;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+
 .bola {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.bola-vermelha {
+  background-color: red;
+}
+.bola-azul {
+  background-color: blue;
+}
+.bola-verde {
+  background-color: green;
+}
+.bola-laranja {
+  background-color: orange;
 }
