@@ -5,6 +5,29 @@
     <title>Tutoriais e CodePens</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
+      /* Estilo para transformar os links do menu em botões */
+      header nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .nav-button {
+        background-color: #1e293b; /* Cor de fundo escura tipo botão */
+        color: white !important;
+        padding: 10px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-button:hover {
+        background-color: #334155; /* Cor um pouco mais clara ao passar o rato */
+      }
+
       .codepen {
         height: 300px;
         box-sizing: border-box;
@@ -79,12 +102,11 @@
       }
     </style>
   </head>
-  <body class="tutoriais-main">
-    <header>
+  <header class="hero-section" style="min-height: auto; padding: 20px 0;">
       <nav aria-label="Menu Principal">
         <ul>
-          <li><a href="index.html">Início</a></li>
-          <li><a href="tutoriais.html">Tutoriais</a></li>
+          <li><a href="index.html" class="nav-button">Início</a></li>
+          <li><a href="tutoriais.html" class="nav-button">Tutoriais</a></li>
         </ul>
       </nav>
     </header>
@@ -179,6 +201,19 @@
                 >) on <a href="https://codepen.io">CodePen</a>.</span
               >
             </p>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>Videotutoriais</h2>
+        <div class="content-grid">
+          <article>
+            <h3>Flexbox</h3>
+            <video controls width="100%">
+              <source src="videos/recording-2026-10-19_00-01-53.webm" type="video/webm">
+              O teu navegador não suporta a reprodução de vídeos.
+            </video>
           </article>
         </div>
       </section>
