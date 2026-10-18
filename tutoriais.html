@@ -19,7 +19,6 @@
         background-color: #ffffff;
       }
 
-      /* Grelha para colocar vídeos e codepens lado a lado */
       .content-grid {
         display: flex;
         flex-wrap: wrap;
@@ -30,7 +29,6 @@
         margin-top: 30px;
       }
 
-      /* Cartões individuais para cada artigo de vídeo ou codepen */
       .content-grid article {
         background: white;
         padding: 20px;
@@ -49,37 +47,33 @@
         margin-bottom: 15px;
         color: #333;
       }
-      /* Estilo para transformar os links do menu em botões */
-      header nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
 
-      .nav-button {
-        background-color: #1e293b; /* Cor de fundo escura tipo botão */
-        color: white !important;
-        padding: 10px 24px;
+      .content-grid iframe {
+        width: 100%;
+        max-width: 100%;
+        border: none;
         border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
       }
 
-      .nav-button:hover {
-        background-color: #334155; /* Cor um pouco mais clara ao passar o rato */
+      .codepen-embed {
+        height: 300px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid;
+        margin: 1em 0;
+        padding: 1em;
+        width: 100%;
       }
     </style>
   </head>
   <body class="tutoriais-main">
-    <!-- Link de regresso à Landing Page -->
-    <header class="hero-section" style="min-height: auto; padding: 20px 0">
+    <header>
       <nav aria-label="Menu Principal">
         <ul>
-          <li><a href="index.html" class="nav-button">Início</a></li>
-          <li><a href="tutoriais.html" class="nav-button">Tutoriais</a></li>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="tutoriais.html">Tutoriais</a></li>
         </ul>
       </nav>
     </header>
@@ -95,7 +89,6 @@
               height="315"
               src="https://www.youtube.com/embed/SEU_VIDEO_SELETORES"
               title="Seletores"
-              frameborder="0"
               allow="
                 accelerometer;
                 autoplay;
@@ -115,7 +108,6 @@
               height="315"
               src="https://www.youtube.com/embed/SEU_VIDEO_FLEX"
               title="Flexbox"
-              frameborder="0"
               allow="
                 accelerometer;
                 autoplay;
@@ -135,7 +127,6 @@
               height="315"
               src="https://www.youtube.com/embed/SEU_VIDEO_GRID"
               title="Grid"
-              frameborder="0"
               allow="
                 accelerometer;
                 autoplay;
@@ -155,7 +146,6 @@
               height="315"
               src="https://www.youtube.com/embed/SEU_VIDEO_MEDIA"
               title="Media Queries"
-              frameborder="0"
               allow="
                 accelerometer;
                 autoplay;
@@ -182,17 +172,7 @@
               data-default-tab="html,result"
               data-slug-hash="OPpmOEW"
               data-user="Sleeping-Beauty"
-              style="
-                height: 300px;
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 2px solid;
-                margin: 1em 0;
-                padding: 1em;
-                width: 100%;
-              "
+              class="codepen-embed"
             >
               <span
                 >See the Pen
@@ -215,17 +195,7 @@
               data-default-tab="html,result"
               data-slug-hash="myWmqKP"
               data-user="Sleeping-Beauty"
-              style="
-                height: 300px;
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 2px solid;
-                margin: 1em 0;
-                padding: 1em;
-                width: 100%;
-              "
+              class="codepen-embed"
             >
               <span
                 >See the Pen
@@ -248,17 +218,7 @@
               data-default-tab="html,result"
               data-slug-hash="VYpbrdY"
               data-user="Sleeping-Beauty"
-              style="
-                height: 300px;
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 2px solid;
-                margin: 1em 0;
-                padding: 1em;
-                width: 100%;
-              "
+              class="codepen-embed"
             >
               <span
                 >See the Pen
@@ -281,17 +241,7 @@
               data-default-tab="html,result"
               data-slug-hash="ZYeBdyZ"
               data-user="Sleeping-Beauty"
-              style="
-                height: 300px;
-                box-sizing: border-box;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 2px solid;
-                margin: 1em 0;
-                padding: 1em;
-                width: 100%;
-              "
+              class="codepen-embed"
             >
               <span
                 >See the Pen
@@ -312,7 +262,6 @@
       <p>Universidade Lusófona 2026</p>
     </footer>
 
-    <!-- Script único para carregar todos os CodePens corretamente -->
     <script
       async
       src="https://public.codepenassets.com/embed/index.js"
