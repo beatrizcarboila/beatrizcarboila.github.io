@@ -5,40 +5,6 @@
     <title>Tutoriais e CodePens</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
-      /* Estilo para transformar os links do menu em botões */
-      header nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
-
-      .nav-button {
-        background-color: #1e293b; /* Cor de fundo escura tipo botão */
-        color: white !important;
-        padding: 10px 24px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
-      }
-
-      .nav-button:hover {
-        background-color: #334155; /* Cor um pouco mais clara ao passar o rato */
-      }
-
-      .codepen {
-        height: 300px;
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border: 2px solid;
-        margin: 1em 0;
-        padding: 1em;
-        width: 100%;
-      }
       .tutoriais-main section {
         height: auto;
         min-height: auto;
@@ -82,27 +48,44 @@
         color: #333;
       }
 
-      .content-grid iframe {
+      .content-grid iframe,
+      .content-grid video {
         width: 100%;
         max-width: 100%;
         border: none;
         border-radius: 8px;
       }
 
-      .codepen-embed {
-        height: 300px;
-        box-sizing: border-box;
+      header nav ul {
+        list-style: none;
         display: flex;
-        align-items: center;
         justify-content: center;
-        border: 2px solid;
-        margin: 1em 0;
-        padding: 1em;
-        width: 100%;
+        gap: 20px;
+      }
+
+      .nav-button {
+        background-color: #1e293b;
+        color: white !important;
+        padding: 10px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-button:hover {
+        background-color: #334155;
+      }
+
+      .tutoriais-header {
+        background-color: #0f172a;
+        padding: 20px 0;
       }
     </style>
   </head>
-  <header class="hero-section" style="min-height: auto; padding: 20px 0;">
+  <body class="tutoriais-main">
+    <header class="tutoriais-header">
       <nav aria-label="Menu Principal">
         <ul>
           <li><a href="index.html" class="nav-button">Início</a></li>
@@ -210,8 +193,11 @@
         <div class="content-grid">
           <article>
             <h3>Flexbox</h3>
-            <video controls width="100%">
-              <source src="videos/recording-2026-10-19_00-01-53.webm" type="video/webm">
+            <video controls>
+              <source
+                src="videos/recording-2026-10-19_00-01-53.webm"
+                type="video/webm"
+              />
               O teu navegador não suporta a reprodução de vídeos.
             </video>
           </article>
