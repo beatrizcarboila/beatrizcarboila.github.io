@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Localização</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .header {
+        background-color: blueviolet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: header-area;
+      }
+      .main {
+        background-color: aquamarine;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: main-area;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 60px 120px 180px 120px 60px;
+        gap: 10px;
+        grid-template-areas:
+          "header-area   header-area      header-area"
+          "photos        main-area        main-area"
+          "side-bar      extra-content    extra-content"
+          "related-images related-images  related-posts"
+          "footer          footer          footer";
+      }
+
+      .photos {
+        background-color: rgb(33, 61, 52);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: photos;
+      }
+
+      .extra-content {
+        background-color: rgb(105, 12, 12);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: extra-content;
+      }
+
+      .related-images {
+        background-color: rgb(255, 127, 127);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: related-images;
+      }
+
+      .related-posts {
+        background-color: rgb(255, 253, 127);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: related-posts;
+      }
+
+      .footer {
+        background-color: rgb(193, 127, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: footer;
+      }
+
+      .side-bar {
+        background-color: rgb(119, 6, 6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: side-bar;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <p>header</p>
+      </header>
+
+      <section class="photos">photo</section>
+
+      <main class="main">
+        <p>main</p>
+      </main>
+
+      <section class="side-bar">side-bar</section>
+
+      <section class="extra-content">extra-content</section>
+
+      <section class="related-images">related-images</section>
+
+      <section class="related-posts">related-posts</section>
+
+      <footer class="footer">
+        <p>footer</p>
+      </footer>
+    </div>
+  </body>
+</html>

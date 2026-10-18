@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Tutoriais e CodePens</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .tutoriais-main section {
+        height: auto;
+        min-height: auto;
+        padding: 60px 20px;
+      }
+
+      .tutoriais-main section:nth-child(odd) {
+        background-color: #fdf2f8;
+      }
+
+      .tutoriais-main section:nth-child(even) {
+        background-color: #ffffff;
+      }
+
+      /* Grelha para colocar vídeos e codepens lado a lado */
+      .content-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        max-width: 1200px;
+        width: 100%;
+        margin-top: 30px;
+      }
+
+      /* Cartões individuais para cada artigo de vídeo ou codepen */
+      .content-grid article {
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+        flex: 1 1 45%;
+        min-width: 320px;
+        max-width: 550px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .content-grid article h3 {
+        margin-bottom: 15px;
+        color: #333;
+      }
+      /* Estilo para transformar os links do menu em botões */
+      header nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .nav-button {
+        background-color: #1e293b; /* Cor de fundo escura tipo botão */
+        color: white !important;
+        padding: 10px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-button:hover {
+        background-color: #334155; /* Cor um pouco mais clara ao passar o rato */
+      }
+    </style>
+  </head>
+  <body class="tutoriais-main">
+    <!-- Link de regresso à Landing Page -->
+    <header class="hero-section" style="min-height: auto; padding: 20px 0">
+      <nav aria-label="Menu Principal">
+        <ul>
+          <li><a href="index.html" class="nav-button">Início</a></li>
+          <li><a href="tutoriais.html" class="nav-button">Tutoriais</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Videotutoriais</h2>
+        <div class="content-grid">
+          <article>
+            <h3>Seletores e sua composição</h3>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/SEU_VIDEO_SELETORES"
+              title="Seletores"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            ></iframe>
+          </article>
+
+          <article>
+            <h3>Flexbox</h3>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/SEU_VIDEO_FLEX"
+              title="Flexbox"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            ></iframe>
+          </article>
+
+          <article>
+            <h3>CSS Grid</h3>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/SEU_VIDEO_GRID"
+              title="Grid"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            ></iframe>
+          </article>
+
+          <article>
+            <h3>Responsividade com Media Queries</h3>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/SEU_VIDEO_MEDIA"
+              title="Media Queries"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+            ></iframe>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <h2>CodePens</h2>
+        <div class="content-grid">
+          <article>
+            <h3>Exercício CSS grid layout</h3>
+            <p
+              class="codepen"
+              data-height="300"
+              data-pen-title="Exercício CSS grid layout"
+              data-default-tab="html,result"
+              data-slug-hash="OPpmOEW"
+              data-user="Sleeping-Beauty"
+              style="
+                height: 300px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid;
+                margin: 1em 0;
+                padding: 1em;
+                width: 100%;
+              "
+            >
+              <span
+                >See the Pen
+                <a href="https://codepen.io/Sleeping-Beauty/pen/OPpmOEW"
+                  >Exercício CSS grid layout</a
+                >
+                by Sleeping Beauty (<a href="https://codepen.io/Sleeping-Beauty"
+                  >@Sleeping-Beauty</a
+                >) on <a href="https://codepen.io">CodePen</a>.</span
+              >
+            </p>
+          </article>
+
+          <article>
+            <h3>Exercício Flexbox</h3>
+            <p
+              class="codepen"
+              data-height="300"
+              data-pen-title="Exercício Flexbox"
+              data-default-tab="html,result"
+              data-slug-hash="myWmqKP"
+              data-user="Sleeping-Beauty"
+              style="
+                height: 300px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid;
+                margin: 1em 0;
+                padding: 1em;
+                width: 100%;
+              "
+            >
+              <span
+                >See the Pen
+                <a href="https://codepen.io/Sleeping-Beauty/pen/myWmqKP"
+                  >Exercício Flexbox</a
+                >
+                by Sleeping Beauty (<a href="https://codepen.io/Sleeping-Beauty"
+                  >@Sleeping-Beauty</a
+                >) on <a href="https://codepen.io">CodePen</a>.</span
+              >
+            </p>
+          </article>
+
+          <article>
+            <h3>Exercício @media query</h3>
+            <p
+              class="codepen"
+              data-height="300"
+              data-pen-title="pergunta 2 @media query"
+              data-default-tab="html,result"
+              data-slug-hash="VYpbrdY"
+              data-user="Sleeping-Beauty"
+              style="
+                height: 300px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid;
+                margin: 1em 0;
+                padding: 1em;
+                width: 100%;
+              "
+            >
+              <span
+                >See the Pen
+                <a href="https://codepen.io/Sleeping-Beauty/pen/VYpbrdY"
+                  >pergunta 2 @media query</a
+                >
+                by Sleeping Beauty (<a href="https://codepen.io/Sleeping-Beauty"
+                  >@Sleeping-Beauty</a
+                >) on <a href="https://codepen.io">CodePen</a>.</span
+              >
+            </p>
+          </article>
+
+          <article>
+            <h3>Exercício Seletores</h3>
+            <p
+              class="codepen"
+              data-height="300"
+              data-pen-title="Exercício 4"
+              data-default-tab="html,result"
+              data-slug-hash="ZYeBdyZ"
+              data-user="Sleeping-Beauty"
+              style="
+                height: 300px;
+                box-sizing: border-box;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid;
+                margin: 1em 0;
+                padding: 1em;
+                width: 100%;
+              "
+            >
+              <span
+                >See the Pen
+                <a href="https://codepen.io/Sleeping-Beauty/pen/ZYeBdyZ"
+                  >Exercício 4</a
+                >
+                by Sleeping Beauty (<a href="https://codepen.io/Sleeping-Beauty"
+                  >@Sleeping-Beauty</a
+                >) on <a href="https://codepen.io">CodePen</a>.</span
+              >
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Universidade Lusófona 2026</p>
+    </footer>
+
+    <!-- Script único para carregar todos os CodePens corretamente -->
+    <script
+      async
+      src="https://public.codepenassets.com/embed/index.js"
+    ></script>
+  </body>
+</html>
