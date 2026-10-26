@@ -1,0 +1,26 @@
+/* Estilização do main */
+main {
+  background-color: #f4f4f9;
+  margin: 20px auto; /*distancia entre o elemento e os restante*/
+  padding: 20px; /*espaço interior entre elemento e borda*/
+  border-radius: 8px; /*arredondar as bordas*/
+}
+
+section {
+  border: 1px solid grey;
+  padding: 15px; /*espaço interior entre elemento e borda*/
+  margin: 20px; /*distancia entre o elemento e os restante*/
+}
+
+/* form(formulário) agrupa elementos interativos*/
+#form-cromo {
+  display: flex; /*torna flexivel */
+  flex-direction: column; /*empilhar os elementos uns por cima dos outros*/
+  gap: 10px; /* Espaçamento entre o input e o botão */
+}
+
+/*  inputs e botões */
+#form-cromo input, /*para usar o css em todos os butoes,textos ou numeros*/
+#form-cromo button {
+  padding: 10px; /*espaço interior entre elemento e borda*/
+}
