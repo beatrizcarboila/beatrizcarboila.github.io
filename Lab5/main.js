@@ -75,7 +75,6 @@
 //   document.querySelector('#flex-container').style.flexDirection = this.value;
 //});
 
-
 // 1. VARIÁVEIS E INICIALIZAÇÃO DO LOCAL STORAGE
 
 if (!localStorage.getItem("counter")) {
