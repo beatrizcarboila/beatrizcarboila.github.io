@@ -86,16 +86,16 @@ section {
 }
 
 /* Títulos do Cesto ordenados para evitar conflito de especificidade */
-#cesto article h3 {
-  font-size: 16px;
-  margin: 10px 0;
-  color: #111;
-}
-
 .cesto-total h3 {
   font-size: 20px;
   color: #fff;
   margin: 0;
+}
+
+#cesto article h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #111;
 }
 
 /* Estilo Individual dos Cartões (Articles) */
@@ -130,16 +130,20 @@ section {
   color: #111;
 }
 
-#produtos article p,
-#cesto article p {
+#cesto article p,
+#produtos article p {
   font-size: 13px;
   color: #666;
   margin-bottom: 15px;
   line-height: 1.4;
 }
 
-#produtos article p:nth-last-of-type(1),
 #cesto article p {
+  font-weight: bold;
+  color: #222;
+}
+
+#produtos article p:nth-last-of-type(1) {
   font-weight: bold;
   color: #222;
 }
@@ -147,8 +151,7 @@ section {
 /* Botões do Cesto */
 #cesto article button {
   background-color: #fff;
-  border-color: #b0bec5;
-  border: 1px solid #ccc;
+  border: 1px solid #b0bec5;
   border-radius: 6px;
   padding: 8px 15px;
   cursor: pointer;

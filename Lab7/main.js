@@ -1,3 +1,5 @@
+/* global produtos */
+
 // A. Estado e Variáveis
 const seccaoProdutos = document.getElementById("produtos");
 const seccaoCesto = document.getElementById("cesto");
