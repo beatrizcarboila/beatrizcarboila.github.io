@@ -1,0 +1,184 @@
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #6b2d3c;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Secção Principal e Títulos das Secções */
+main {
+  padding: 20px;
+}
+
+section {
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Secção de Produtos */
+#produtos {
+  background-color: #f4f4f9;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+#produtos h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Secção do Cesto (com o fundo roxo/plum da segunda imagem) */
+#cesto {
+  background-color: #6b2d3c;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#cesto h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Estilo Individual dos Cartões (Articles) */
+#produtos article,
+#cesto article {
+  background-color: white;
+  color: #333;
+  border-radius: 12px;
+  padding: 20px;
+  width: 260px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* Imagens dos Produtos */
+#produtos article img,
+#cesto article img {
+  width: 120px;
+  height: 140px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* Textos dentro dos Cartões */
+#produtos article h2,
+#cesto article h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #111;
+}
+
+#produtos article p {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+/* Preço */
+#produtos article p:nth-last-of-type(1),
+#cesto article p {
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+/* Botões */
+#produtos article button,
+#cesto article button {
+  background-color: #f8f9fa;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+
+#produtos article button:hover {
+  background-color: #e2e6ea;
+}
+
+#cesto article button {
+  background-color: #fff;
+  border-color: #b0bec5;
+}
+
+#cesto article button:hover {
+  background-color: #eceff1;
+}
+
+/* Div do Preço Total do Cesto */
+.cesto-total {
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.cesto-total h3 {
+  font-size: 20px;
+  color: white;
+  margin: 0;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: white;
+  color: black;
+  font-size: 14px;
+}
