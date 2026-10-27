@@ -10,7 +10,7 @@ body {
 /* Cabeçalho */
 header {
   background-color: #6b2d3c;
-  color: white;
+  color: #fff;
   padding: 15px 30px;
   display: flex;
   justify-content: space-between;
@@ -31,7 +31,7 @@ header nav ul {
 }
 
 header nav ul li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
 }
@@ -67,10 +67,10 @@ section {
   color: #333;
 }
 
-/* Secção do Cesto (com o fundo roxo/plum da segunda imagem) */
+/* Secção do Cesto */
 #cesto {
-  background-color: #6b2d3c;
-  color: white;
+  background-color: #6a3e68;
+  color: #fff;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -82,18 +82,18 @@ section {
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
-  color: white;
+  color: #fff;
 }
 
 /* Estilo Individual dos Cartões (Articles) */
 #produtos article,
 #cesto article {
-  background-color: white;
+  background-color: #fff;
   color: #333;
   border-radius: 12px;
   padding: 20px;
   width: 260px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgb(0 0 0 / 10%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,19 +118,18 @@ section {
   color: #111;
 }
 
-#produtos article p {
+#produtos article p,
+#cesto article p {
   font-size: 13px;
   color: #666;
   margin-bottom: 15px;
   line-height: 1.4;
 }
 
-/* Preço */
 #produtos article p:nth-last-of-type(1),
 #cesto article p {
   font-weight: bold;
   color: #222;
-  margin-bottom: 15px;
 }
 
 /* Botões */
@@ -143,7 +142,6 @@ section {
   cursor: pointer;
   font-size: 13px;
   font-weight: bold;
-  transition: background-color 0.2s;
   width: 100%;
 }
 
@@ -170,7 +168,7 @@ section {
 
 .cesto-total h3 {
   font-size: 20px;
-  color: white;
+  color: #fff;
   margin: 0;
 }
 
@@ -178,7 +176,7 @@ section {
 footer {
   text-align: center;
   padding: 20px;
-  background-color: white;
-  color: black;
+  background-color: #333;
+  color: #fff;
   font-size: 14px;
 }

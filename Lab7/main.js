@@ -1,3 +1,5 @@
+/* global produtos */
+
 // A. Estado e Variáveis
 const seccaoProdutos = document.getElementById("produtos");
 const seccaoCesto = document.getElementById("cesto");
@@ -74,9 +76,8 @@ function criaProdutoCesto(produto, index) {
 
 // C. Event handlers / Funções de Renderização
 function renderizarProdutos(listaProdutos) {
-  seccaoProdutos.innerHTML = "<h2>Selecione os seus Produtos</h2>";
+  seccaoProdutos.innerHTML = "<h2>Produtos</h2>";
 
-  // Aqui é onde o script vai buscar os dados ao array importado de produtos.js
   listaProdutos.forEach(function (produto) {
     const artigoProduto = criarProduto(produto);
     seccaoProdutos.appendChild(artigoProduto);
@@ -110,6 +111,5 @@ function atualizaCesto() {
 // (Reservado para eventos globais)
 
 // E. Inicialização
-// Executa as funções principais assim que a página abre
 renderizarProdutos(produtos);
 atualizaCesto();
