@@ -85,6 +85,19 @@ section {
   color: #fff;
 }
 
+/* Títulos do Cesto ordenados para evitar conflito de especificidade */
+#cesto article h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #111;
+}
+
+.cesto-total h3 {
+  font-size: 20px;
+  color: #fff;
+  margin: 0;
+}
+
 /* Estilo Individual dos Cartões (Articles) */
 #produtos article,
 #cesto article {
@@ -111,8 +124,7 @@ section {
 }
 
 /* Textos dentro dos Cartões */
-#produtos article h2,
-#cesto article h3 {
+#produtos article h2 {
   font-size: 16px;
   margin: 10px 0;
   color: #111;
@@ -132,9 +144,21 @@ section {
   color: #222;
 }
 
-/* Botões */
-#produtos article button,
+/* Botões do Cesto */
 #cesto article button {
+  background-color: #fff;
+  border-color: #b0bec5;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  width: 100%;
+}
+
+/* Botões Gerais */
+#produtos article button {
   background-color: #f8f9fa;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -149,11 +173,6 @@ section {
   background-color: #e2e6ea;
 }
 
-#cesto article button {
-  background-color: #fff;
-  border-color: #b0bec5;
-}
-
 #cesto article button:hover {
   background-color: #eceff1;
 }
@@ -164,12 +183,6 @@ section {
   text-align: center;
   margin-top: 20px;
   padding: 15px;
-}
-
-.cesto-total h3 {
-  font-size: 20px;
-  color: #fff;
-  margin: 0;
 }
 
 /* Rodapé */
