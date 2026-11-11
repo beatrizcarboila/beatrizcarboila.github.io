@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Loja DEISI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Loja DEISI</h1>
+    </header>
+
+    <main>
+      <div id="area-produtos">
+        <div class="filtro-row">
+          <div>
+            <label for="filtro-categorias">Filtrar por categoria:</label>
+            <select id="filtro-categorias"></select>
+          </div>
+          <div>
+            <label for="ordenar-preco">Ordenar por preço:</label>
+            <select id="ordenar-preco">
+              <option value="">Normal</option>
+              <option value="crescente">Preço Crescente</option>
+              <option value="decrescente">Preço Decrescente</option>
+            </select>
+          </div>
+        </div>
+
+        <h2>Produtos</h2>
+        <section id="produtos"></section>
+      </div>
+
+      <div id="area-cesto">
+        <h2>Cesto</h2>
+        <section id="produtos-selecionados"></section>
+        <p id="total">Total: €0.00</p>
+
+        <div id="checkout-section">
+          <label>
+            <input type="checkbox" id="estudante-deisi" /> És estudante do
+            DEISI?
+          </label>
+          <div class="cupao-group">
+            <label for="input-cupao">Cupão de desconto:</label>
+            <input type="text" id="input-cupao" placeholder="Insira o cupão" />
+          </div>
+          <button id="btn-comprar">Comprar</button>
+          <div id="resultado-compra"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 - Universidade Lusófona</p>
+    </footer>
+
+    <a class="back-home" href="/index.html">Landing page</a>
+    <script src="main.js"></script>
+  </body>
+</html>
