@@ -63,7 +63,7 @@ async function detectarAPI() {
         // Sai da função pois já encontrou um servidor funcional
         return;
       } // Fim da verificação de resposta ok
-    } catch (e) {
+    } catch (_e) {
       // Caso ocorra um erro de ligação, avisa na consola e continua o ciclo
       console.warn("❌ Falhou ao aceder a:", base);
     } // Fim do bloco try-catch
