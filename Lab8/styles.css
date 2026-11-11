@@ -79,7 +79,6 @@ button:hover {
   border: 1px solid #ddd;
 }
 
-
 @media (width <= 900px) {
   #produtos article {
     width: calc(50% - 10px);
@@ -93,7 +92,6 @@ button:hover {
     position: static;
   }
 }
-
 
 @media (width <= 480px) {
   #produtos article {
